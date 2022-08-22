@@ -13,6 +13,7 @@ public class Tictactoe extends JPanel
 {
 	   JButton buttons[] = new JButton[9]; 
     int alternate = 0;
+    public JButton buttonClicked;
     
     public Tictactoe()
     {
@@ -47,20 +48,25 @@ public class Tictactoe extends JPanel
        
         public void actionPerformed(ActionEvent e) 
         {
-            
-            
+           int spieler=0;
+           int spieler2=0;
+        
             JButton buttonClicked = (JButton)e.getSource(); 
             if(alternate%2 == 0) {
                 buttonClicked.setText("X");
                 buttonClicked.setFont(new Font("Arial", Font.BOLD, 60));
             	buttonClicked.setBackground(Color.green);
-            	System.out.println("x - " + alternate);
+                System.out.println("x - " + alternate);
+            	spieler=alternate;
+                
             }else {
                 buttonClicked.setText("O");
                 buttonClicked.setFont(new Font("Arial", Font.BOLD, 60));
             	buttonClicked.setBackground(Color.red);
             	System.out.println("o - " + alternate);//Spieler O ist ungerade Spieler 1 ist gerade
-            }
+                spieler2=alternate;
+            } 
+            alternate++;
             if(gewinnprüfung() == true)
             {
             
@@ -68,9 +74,15 @@ public class Tictactoe extends JPanel
                 JOptionPane.showConfirmDialog(null, "Spiel beendet" );
                 
                 resetButtons();
+                alternate=0;
+            }else if(spieler==8){
+
+                JOptionPane.showConfirmDialog(null, "Spiel ist unendschieden" );
+                resetButtons();
+                alternate=0;
             }
-                
-            alternate++;
+            
+           
             
         }
         
@@ -98,9 +110,11 @@ public class Tictactoe extends JPanel
             else if ( checkAdjacent(2,4) && checkAdjacent(4,6))
             return true;
             else 
+
+            
             return false;
             }
-            //ab neun z�ge reseten
+            //ab neun zuege reseten
         
         
             
