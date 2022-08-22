@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Oberfläche {
+public class OberflÃ¤che {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -110,7 +110,7 @@ public class Oberfläche {
 			  	background1 = new JLabel("",img1,JLabel.CENTER);
 			  	background1.setBounds(0,0,1280,720);
 			  	
-			  	// Hinzugefügt PANNEL
+			  	// Hinzugefï¿½gt PANNEL
 				f1.add(p2);
 			  	p2.add(background1);
 			  	p2.setBackground(Color.black);
@@ -223,7 +223,7 @@ public class Oberfläche {
 					}});
 			
 			cf.setSize(1280,720);
-			cf.setLayout(null);								// das muss über RelativeToNull sein!
+			cf.setLayout(null);								// das muss ï¿½ber RelativeToNull sein!
 			cf.setLocationRelativeTo(null);
 			cf.setResizable(false);
 			cf.setVisible(true);

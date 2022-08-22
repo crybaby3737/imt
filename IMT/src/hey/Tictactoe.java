@@ -17,10 +17,10 @@ public class Tictactoe extends JPanel
     public Tictactoe()
     {
       setLayout(new GridLayout(3,3));
-      knöpfe(); 
+      knÃ¶pfe(); 
     }
     
-    public void knöpfe()
+    public void knÃ¶pfe()
     {
         for(int i = 0; i <= 8; i++)
         {
@@ -61,7 +61,7 @@ public class Tictactoe extends JPanel
             	buttonClicked.setBackground(Color.red);
             	System.out.println("o - " + alternate);//Spieler O ist ungerade Spieler 1 ist gerade
             }
-            if(gewinnprüfung() == true)
+            if(gewinnprÃ¼fung() == true)
             {
             
             	
@@ -74,7 +74,7 @@ public class Tictactoe extends JPanel
             
         }
         
-        public boolean gewinnprüfung()
+        public boolean gewinnprÃ¼fung()
         {
             //horizontal 
             if( checkAdjacent(0,1) && checkAdjacent(1,2) )  
@@ -100,7 +100,7 @@ public class Tictactoe extends JPanel
             else 
             return false;
             }
-            //ab neun züge reseten
+            //ab neun zï¿½ge reseten
         
         
             
